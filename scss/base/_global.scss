@@ -13,6 +13,14 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  background: radial-gradient(circle at bottom, #fff, transparent 80%),
+    linear-gradient(to top, rgb(253, 178, 93) 0%, transparent 70%),
+    linear-gradient(to bottom, transparent, rgba(#fff, 0.4) 70%),
+    rgb(253, 178, 93);
+  animation: bg 30s infinite;
+}
+
 .container {
   max-width: 90vw;
   margin: 0 auto;
@@ -48,5 +56,21 @@ html {
   }
   100% {
     rotate: 30deg;
+  }
+}
+
+@keyframes bg {
+  0%,
+  100% {
+    background-color: #b9dafa;
+  }
+  25% {
+    background-color: #e3fac4;
+  }
+  50% {
+    background-color: #ffe244;
+  }
+  75% {
+    background-color: #ffa836;
   }
 }
