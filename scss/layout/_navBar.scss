@@ -1,0 +1,112 @@
+.mainNav {
+  background-color: $bg-color;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .navLogo {
+    height: 100px;
+    position: fixed;
+    left: 20px;
+    top: 0;
+  }
+
+  label[for="dropNav"] {
+    display: none;
+    border: 2px solid $bg-color;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .navBar {
+    text-align: center;
+    padding: 35px 0;
+    font-size: 1rem;
+
+    hr {
+      display: none;
+    }
+    .navLink {
+      display: inline;
+      border: 2px solid $bg-color;
+      border-radius: 20px;
+      padding: 5px 5px;
+      margin: 0 40px;
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        list-style: none;
+        padding: 5px;
+      }
+    }
+    .navLink:hover {
+      border: 2px solid $secondary-color;
+      transition: all 0.3s;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 860px) {
+  .navLogo {
+    display: none;
+  }
+}
+
+@media all and (max-width: 702px) {
+  .mainNav {
+    font-size: 0.8em;
+    label[for="dropNav"] {
+      display: block;
+      padding: 28px 20px;
+      color: $secondary-color;
+      text-align: right;
+      cursor: pointer;
+    }
+
+    .navLogo {
+      display: block;
+    }
+
+    #dropNav:checked + .navBar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border-top: 2px solid $secondary-color;
+    }
+
+    .navBar {
+      display: none;
+
+      .navLink {
+        display: block;
+        text-align: center;
+        width: 100px;
+        margin: 10px 0;
+      }
+
+      hr {
+        display: block;
+        height: 50px;
+        margin: 0 10px;
+        border: 1px solid $secondary-color;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  #dropNav:checked + .navBar {
+    flex-direction: column;
+
+    hr {
+      height: 0;
+      width: 100px;
+    }
+  }
+}
