@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap");
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   scroll-behavior: smooth;
 }
 
-body {
+body,
+html {
   font-family: "Cabin", sans-serif;
-  font-size: 24px;
-}
-
-.close {
-  display: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -124,7 +124,6 @@ body {
 }
 .mainNav label[for=dropNav] {
   display: none;
-  border: 2px solid #222;
 }
 .mainNav input[type=checkbox] {
   display: none;
@@ -133,6 +132,8 @@ body {
   text-align: center;
   padding: 35px 0;
   font-size: 1rem;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
 }
 .mainNav .navBar hr {
   display: none;
@@ -158,18 +159,18 @@ body {
   color: #fff;
 }
 
-@media all and (max-width: 860px) {
+@media all and (max-width: 980px) {
   .navLogo {
     display: none;
   }
 }
-@media all and (max-width: 702px) {
+@media all and (max-width: 750px) {
   .mainNav {
-    font-size: 0.8em;
+    font-size: 1.6rem;
   }
   .mainNav label[for=dropNav] {
     display: block;
-    padding: 28px 20px;
+    padding: 30px 20px;
     color: rgba(255, 167, 5, 0.829);
     text-align: right;
     cursor: pointer;

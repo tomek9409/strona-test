@@ -13,7 +13,6 @@
 
   label[for="dropNav"] {
     display: none;
-    border: 2px solid $bg-color;
   }
 
   input[type="checkbox"] {
@@ -24,10 +23,13 @@
     text-align: center;
     padding: 35px 0;
     font-size: 1rem;
+    margin: 0;
+    font-family: $secondary-font;
 
     hr {
       display: none;
     }
+
     .navLink {
       display: inline;
       border: 2px solid $bg-color;
@@ -42,9 +44,11 @@
         padding: 5px;
       }
     }
+
     .navLink:hover {
       border: 2px solid $secondary-color;
       transition: all 0.3s;
+
       a {
         color: #fff;
       }
@@ -52,18 +56,19 @@
   }
 }
 
-@media all and (max-width: 860px) {
+@media all and (max-width: 980px) {
   .navLogo {
     display: none;
   }
 }
 
-@media all and (max-width: 702px) {
+@media all and (max-width: 750px) {
   .mainNav {
-    font-size: 0.8em;
+    font-size: 1.6rem;
+
     label[for="dropNav"] {
       display: block;
-      padding: 28px 20px;
+      padding: 30px 20px;
       color: $secondary-color;
       text-align: right;
       cursor: pointer;
