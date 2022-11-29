@@ -14,7 +14,7 @@ html {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
@@ -33,5 +33,20 @@ html {
 @media (max-width: 768px) {
   .container {
     max-width: 95%;
+  }
+}
+
+@keyframes rotate {
+  20% {
+    rotate: -30deg;
+  }
+  40% {
+    rotate: 30deg;
+  }
+  70% {
+    rotate: -30deg;
+  }
+  100% {
+    rotate: 30deg;
   }
 }

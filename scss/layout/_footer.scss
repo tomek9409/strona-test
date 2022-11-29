@@ -1,51 +1,42 @@
 .footer {
-  padding: 20px;
   background-color: $bg-color;
-  width: 100%;
+  width: 100vw;
 
   .contactBox {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
+    padding: 40px 0;
 
     .infoSection {
-      margin: 20px auto;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
 
       .infoBox {
         display: flex;
-        width: 500px;
-        margin: 20px 0;
+        text-transform: uppercase;
+        align-items: center;
+        padding: 12px 0;
+        margin-left: 0 5vw;
 
         i {
           font-size: 30px;
           color: $secondary-color;
-          text-align: center;
           width: 30px;
           margin: 0 20px;
+          text-align: center;
         }
 
         p {
           color: $primary-color;
-          font-size: 16px;
+          font-size: 18px;
+          letter-spacing: 2px;
 
-          a {
+          .mail {
             color: $secondary-color;
             text-decoration: none;
-          }
-        }
-      }
-
-      @media all and (max-width: 420px) {
-        .infoBox {
-          p {
-            font-size: 12px;
-          }
-
-          i {
-            font-size: 16px;
+            text-transform: lowercase;
           }
         }
       }
@@ -57,31 +48,56 @@
       }
     }
     iframe {
-      height: 40vh;
-      width: 80vw;
-      min-width: 30vw;
+      height: 50vh;
+      margin-right: 40px;
+    }
+  }
+
+  .contactBox > * {
+    flex-basis: 100%;
+    margin: 0 10px;
+  }
+
+  @media all and (max-width: 520px) {
+    .contactBox {
+      margin: 0 30px;
+      .infoSection {
+        .infoBox {
+          padding: 5px 0;
+
+          p {
+            font-size: 0.8rem;
+          }
+
+          i {
+            font-size: 16px;
+            margin: 0 10px;
+            width: 20px;
+          }
+        }
+      }
     }
   }
 
   @media all and (max-width: 700px) {
+    .contactBox > * {
+      flex-basis: auto;
+      width: 80vw;
+    }
+
     .contactBox {
       flex-direction: column;
-      align-items: stretch;
-    }
-  }
-}
+      align-items: center;
+      padding: 10px 0;
 
-@keyframes rotate {
-  20% {
-    rotate: -30deg;
-  }
-  40% {
-    rotate: 30deg;
-  }
-  70% {
-    rotate: -30deg;
-  }
-  100% {
-    rotate: 30deg;
+      .infoSection {
+        padding: 20px 0;
+        margin-left: 0;
+      }
+
+      iframe {
+        margin-right: 20px;
+      }
+    }
   }
 }
